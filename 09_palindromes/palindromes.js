@@ -1,15 +1,7 @@
-const palindromes = function (pal) {
-  // check if a word is spelled the same way backward
-  let forward = pal.toLowerCase().replace(/[^a-zA-z]+/g, "");
-  let backward = [...pal]
-    .reverse()
-    .join("")
-    .toLowerCase()
-    .replace(/[^a-zA-z]+/g, "");
-  console.log(forward, backward);
-  return forward === backward;
+const palindromes = function (string) {
+  let stringCleaned = string.replace(/[^a-zA-z]+/g, "").toLowerCase();
+  let stringBackward = [...stringCleaned].reverse().join("");
+  return stringCleaned === stringBackward;
 };
 
-
-// Do not edit below this line
 module.exports = palindromes;
